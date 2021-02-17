@@ -11,9 +11,8 @@
  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="bg-gray-100  " x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}">
-  
   <div class="mx-auto text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 lg:mx-auto lg:ml-24 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
       <div class="p-2 flex flex-row items-center justify-between">
         <a href="#" class="text-4xl font-serif rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-blue-600">GreyCampus<i class="text-sm text-orange-500">Forum</i></a>
         <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
@@ -28,7 +27,7 @@
       </nav>
     </div>
   </div>
-<div class="p-5 xl:px-40 xl:py-10  xl:ml-2 md:ml-5 lg:ml-8  ">
+<div class="p-5 xl:px-32 xl:py-10  xl:ml-2 md:ml-5 lg:ml-8  ">
  <div class="container">
  <div class=" flex flex-wrap">
   <div class="lg:w-3/5">
@@ -391,6 +390,5 @@
   </div>
 </div>
 </div>
-
 </body>
 </html>
