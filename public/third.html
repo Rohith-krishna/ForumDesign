@@ -11,10 +11,9 @@
  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="bg-gray-100  " x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}">
-  
   <div class="mx-auto text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-      <div class="p-4 flex flex-row items-center justify-between">
+    <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 lg:mx-auto lg:ml-24 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="p-2 flex flex-row items-center justify-between">
         <a href="#" class="text-4xl font-serif rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-blue-600">GreyCampus<i class="text-sm text-orange-500">Forum</i></a>
         <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -28,12 +27,12 @@
       </nav>
     </div>
   </div>
-<div class="p-5 lg:px-40 lg:py-10 ml-2">
+<div class="p-5 xl:px-32 xl:py-10  xl:ml-2 md:ml-5 lg:ml-8  ">
  <div class="container">
  <div class=" flex flex-wrap">
   <div class="lg:w-3/5">
    <div class="font-bold text-3xl w-full  border-b-2 ">What is Data Science?
-    <div class=" font-semibold text-xs   rounded-lg mb-2 w-max text-blue-800" id="forum-name" ><ul ><li>PMP Training Course</li></ul></div>
+    <div class=" font-semibold text-xs  rounded-lg mb-2 w-max text-blue-800" id="forum-name" ><ul ><li>PMP Training Course</li></ul></div>
    </div>
     <div class="bg-gray-200 p-3  mt-8   rounded-2xl  ml-auto">
      
@@ -105,7 +104,7 @@
        </div>
        </div>
        <div class="mt-5 border-t-2">
-        <button class="w-1/2 hover:bg-gray-100 rounded-md font-semibold py-2 text-xs mt-1 "><i class="fa fa-arrow-circle-o-up" style="font-size: 1.5em;"></i> Upvote</button><button class="w-1/2 hover:bg-gray-100 font-semibold  rounded-md py-2 text-xs mt-1"><i class="fa fa-reply" aria-hidden="true"></i> Reply </button>
+        <button class="w-1/2 hover:bg-gray-200 rounded-md font-semibold py-2 text-xs mt-1 "><i class="fa fa-arrow-circle-o-up" style="font-size: 1.5em;"></i> Upvote</button><button class="w-1/2 hover:bg-gray-200 font-semibold  rounded-md py-2 text-xs mt-1"><i class="fa fa-reply" aria-hidden="true"></i> <a href="#reply-box"> Reply</a> </button>
        </div>
       </div>
    
@@ -143,7 +142,7 @@
         Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data.
         Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data.
         <div class="mt-2 border-t-2 border-b-2 ">
-         <button class="w-1/2 hover:bg-gray-100 rounded-md font-semibold mb-1 py-2 text-xs mt-1 "><i class="fa fa-arrow-circle-o-up" style="font-size: 1.5em;"></i> Upvote</button><button class="w-1/2 hover:bg-gray-100 font-semibold mb-1 rounded-md py-2 text-xs mt-1"><i class="fa fa-reply" aria-hidden="true"></i> Reply</button>
+         <button class="w-1/2 hover:bg-gray-200 rounded-md font-semibold mb-1 py-2 text-xs mt-1 "><i class="fa fa-arrow-circle-o-up" style="font-size: 1.5em;"></i> Upvote</button><button class="w-1/2 hover:bg-gray-200 font-semibold mb-1 rounded-md py-2 text-xs mt-1"><i class="fa fa-reply" aria-hidden="true"></i><a href="#comment-box"> Reply</a></button>
         </div>
         <div class="mt-2">
          <div class="flex">
@@ -220,7 +219,7 @@
             <div class="mt-2">
               <img src="https://avatars2.githubusercontent.com/u/1490347?s=460&u=39d7a6b9bc030244e2c509119e5f64eabb2b1727&v=4" alt="My profile" class="w-8 h-8  hidden lg:block rounded-full">
             </div>
-           <div class="flex-grow p-3 ml-2 lg:ml-3  bg-gray-100 rounded-3xl  max-w-xl ">
+           <div class="flex-grow p-3 ml-2 lg:ml-3  bg-gray-100 rounded-3xl  max-w-xl " id="comment-box">
             
              <div class="text-sm text-gray-700 ml-auto mt-2">
               <img src="Capture.PNG" class="">
@@ -269,13 +268,13 @@
         Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data.
         Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data.
         <div class="mt-2 ">
-         <button class="w-1/2 hover:bg-gray-100 rounded-md font-semibold py-2 text-xs mt-1 "><i class="fa fa-arrow-circle-o-up" style="font-size: 1.5em;"></i> Upvote</button><button class="w-1/2 hover:bg-gray-100 font-semibold rounded-md py-2 text-xs mt-1"><i class="fa fa-reply" aria-hidden="true"></i> Reply</button>
+         <button class="w-1/2 hover:bg-gray-200 rounded-md font-semibold py-2 text-xs mt-1 "><i class="fa fa-arrow-circle-o-up" style="font-size: 1.5em;"></i> Upvote</button><button class="w-1/2 hover:bg-gray-200 font-semibold rounded-md py-2 text-xs mt-1"><i class="fa fa-reply" aria-hidden="true"></i> Reply</button>
         </div>
        </div>
      </div>
     </div> 
     
-    <div class=" w-full bg-white p-2 rounded-2xl shadow-md ">
+    <div class=" w-full bg-white p-2 rounded-2xl shadow-md " id="reply-box">
      <div class="flex ">
       <div class="flex items-center space-x-4">
         <img src="https://avatars2.githubusercontent.com/u/1490347?s=460&u=39d7a6b9bc030244e2c509119e5f64eabb2b1727&v=4" alt="My profile" class="w-10 h-10 rounded-full">
