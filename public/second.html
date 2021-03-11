@@ -17,7 +17,7 @@
             </div>
           
             <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="#" class="whitespace-nowrap text-base xl:font-medium text-gray-500 hover:text-gray-900">
+              <a href="#" class="whitespace-nowrap text-base xl:font-medium text-gray-500 hover:text-gray-900" @click="showModal2 = true">
                 Sign in
               </a>
               <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 xl:w-32 w-20">
@@ -617,5 +617,59 @@ ELOQUENT
     </div>
   </div>
 </div>
+<div
+      class="fixed inset-0 w-full h-full z-20 bg-black bg-opacity-50 duration-300 overflow-y-auto"
+      x-show="showModal2"
+      x-transition:enter="transition duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+    >
+      <div class="relative sm:w-3/4 md:w-1/2 lg:w-1/3 mx-2 sm:mx-auto my-10 opacity-100">
+        <div
+          class="relative bg-white shadow-lg rounded-lg text-gray-900 z-20"
+          @click.away="showModal2 = false"
+          x-show="showModal2"
+          x-transition:enter="transition transform duration-300"
+          x-transition:enter-start="scale-0"
+          x-transition:enter-end="scale-100"
+          x-transition:leave="transition transform duration-300"
+          x-transition:leave-start="scale-100"
+          x-transition:leave-end="scale-0"
+        >
+        <div class="grid min-h-screen place-items-center">
+          <div class="p-12 bg-white">
+            <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">please fill in your information to continue</span></h1>
+            <form class="mt-6">
+              <div class="flex justify-between gap-3">
+                <span class="w-1/2">
+                  <label for="firstname" class="block text-xs font-semibold text-gray-600 uppercase">Firstname</label>
+                  <input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                </span>
+                <span class="w-1/2">
+                  <label for="lastname" class="block text-xs font-semibold text-gray-600 uppercase">Lastname</label>
+                <input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+                </span>
+              </div>
+              <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">E-mail</label>
+              <input id="email" type="email" name="email" placeholder="john.doe@company.com" autocomplete="email" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+              <label for="password" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
+              <input id="password" type="password" name="password" placeholder="********" autocomplete="new-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+              <label for="password-confirm" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Confirm password</label>
+              <input id="password-confirm" type="password" name="password-confirm" placeholder="********" autocomplete="new-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+              <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                Sign up
+              </button>
+              <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">Already registered?</p>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  
+
 </body>
 </html>
