@@ -17,6 +17,7 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
+
 /**
 Use a more readable tab size (opinionated).
 */
@@ -183942,4 +183943,6 @@ video {
  .comments-bg{
    background-color:#f0f2f5;
  }
- 
+.one{
+  background-image: linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%);
+}
