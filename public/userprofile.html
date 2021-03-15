@@ -9,168 +9,266 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="bg-gray-100" x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}">
-  <div class="relative bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-        <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#" class="xl:text-4xl text-2xl font-serif rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-blue-600">GreyCampus<i class="text-xs md:text-sm text-yellow-500">Forum</i></a>
-        </div>
-      
-        <div x-data="{ dropdownOpen: false }" class="relative">
-            <button @click="dropdownOpen = ! dropdownOpen" 
-                class="flex items-center rounded-lg space-x-2 relative focus:outline-none">
-                
-                <img class="h-9 w-9 rounded-full border-2 object-cover"
-                    src="https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                    alt="Your avatar">
-                <h2 class="text-gray-700 dark:text-gray-300 font-semibold text-sm hidden sm:block">Jones Ferdinand</h2>
-                <svg class="w-2 h-2 absolute top-0 right-0 relative pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-                
-            </button>
+    <div class="relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+            <div class="flex justify-start lg:w-0 lg:flex-1">
+            <a href="#" class="xl:text-4xl text-2xl font-serif rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-blue-600">GreyCampus<i class="text-xs md:text-sm text-yellow-500">Forum</i></a>
+            </div>
+        
+            <div x-data="{ dropdownOpen: false }" class="relative">
+                <button @click="dropdownOpen = ! dropdownOpen" 
+                    class="flex items-center rounded-lg space-x-2 relative focus:outline-none">
+                    
+                    <img class="h-9 w-9 rounded-full border-2 object-cover"
+                        src="https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                        alt="Your avatar">
+                    <h2 class="text-gray-700 dark:text-gray-300 font-semibold text-sm hidden sm:block">Jones Ferdinand</h2>
+                    <svg class="w-2 h-2 absolute top-0 right-0 relative pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+                    
+                </button>
 
-            <div class="absolute right-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-10"
-                x-show="dropdownOpen" x-transition:enter="transition ease-out duration-100 transform"
-                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-                x-transition:leave="transition ease-in duration-75 transform"
-                x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
-                @click.away="dropdownOpen = false">
-                <a href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Profile</a>
-                <a href="activitydashboard.html"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Dashboard</a>
-                <a href="index.html"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Logout</a>
+                <div class="absolute right-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-10"
+                    x-show="dropdownOpen" x-transition:enter="transition ease-out duration-100 transform"
+                    x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                    x-transition:leave="transition ease-in duration-75 transform"
+                    x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
+                    @click.away="dropdownOpen = false">
+                    <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Profile</a>
+                    <a href="activitydashboard.html"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Dashboard</a>
+                    <a href="index.html"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Logout</a>
+                </div>
             </div>
         </div>
-      </div>
+        </div>
     </div>
-  </div>
-  <!-- section 1 -->
-  <section class="one">
-    <div class="container mx-auto max-w-7xl">
-        <div class="flex flex-wrap lg:py-2">
-            <div class="xl:w-3/6 lg:w-1/2 md:w-2/5 p-3 md:p-4">
-                <div class="flex flex-wrap">
-                    <img src="https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="w-32 h-32 rounded-full xl:mx-0 lg:mx-0 mx-auto border-4">
-                    <div class="flex justify-between mb-8 xl:mx-0 lg:mx-0 mx-auto">
-                        <div class="w-64 shadow-2xl ml-4 flex flex-col items-center lg:items-start rounded-xl py-4 px-7" style="background-color: rgba(0,0,0,.1);">
-                            <div class="flex" >
-                                <h1 class="text-xl sm:font-bold text-white tracking-normal lg:mr-4 mb-1">Jones</h1>
-                                <div class="hidden xl:flex xl:justify-center xl:items-center leading-none">
-                                    <a href="#" target="_blank" rel="noreferrer" class="hover:text-white twitter block mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="text-transparent-25 hover:text-white" width="17" height="17" viewBox="0 0 30 30"><path class="tw-fill-current" fill-rule="nonzero" d="M14.896 0C6.682 0 0 6.674 0 14.877c0 8.202 6.682 14.876 14.896 14.876 8.212 0 14.895-6.674 14.895-14.876C29.791 6.674 23.11 0 14.896 0zm6.645 11.472c.006.147.01.296.01.444 0 4.525-3.448 9.74-9.756 9.74A9.707 9.707 0 0 1 6.54 20.12a6.887 6.887 0 0 0 5.076-1.418 3.431 3.431 0 0 1-3.203-2.378 3.46 3.46 0 0 0 1.548-.058 3.426 3.426 0 0 1-2.75-3.357l.001-.043c.462.255.99.41 1.552.427a3.42 3.42 0 0 1-1.06-4.571A9.739 9.739 0 0 0 14.77 12.3a3.426 3.426 0 0 1 3.34-4.205c.986 0 1.875.417 2.502 1.082a6.849 6.849 0 0 0 2.178-.831c-.258.8-.8 1.47-1.51 1.894a6.823 6.823 0 0 0 1.97-.538 6.891 6.891 0 0 1-1.71 1.77z"></path></svg></a>
-                                    <a href="#" target="_blank" rel="noreferrer" class="github hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 30 29" class="text-transparent-25 hover:text-white"><path class="tw-fill-current" fill-rule="nonzero" d="M27.959 7.434a14.866 14.866 0 0 0-5.453-5.414C20.21.69 17.703.025 14.984.025c-2.718 0-5.226.665-7.521 1.995A14.864 14.864 0 0 0 2.01 7.434C.67 9.714 0 12.202 0 14.901c0 3.242.953 6.156 2.858 8.746 1.906 2.589 4.367 4.38 7.385 5.375.351.064.611.019.78-.136a.755.755 0 0 0 .254-.58l-.01-1.047c-.007-.658-.01-1.233-.01-1.723l-.448.077a5.765 5.765 0 0 1-1.083.068 8.308 8.308 0 0 1-1.356-.136 3.04 3.04 0 0 1-1.308-.58c-.403-.304-.689-.701-.858-1.192l-.195-.445a4.834 4.834 0 0 0-.614-.988c-.28-.362-.563-.607-.85-.736l-.136-.097a1.428 1.428 0 0 1-.253-.233 1.062 1.062 0 0 1-.176-.271c-.039-.09-.007-.165.098-.223.104-.059.292-.087.566-.087l.39.058c.26.052.582.206.965.465.384.258.7.594.947 1.007.299.53.66.933 1.082 1.21.423.278.85.417 1.278.417.43 0 .8-.032 1.112-.097a3.9 3.9 0 0 0 .878-.29c.117-.866.436-1.53.956-1.996a13.447 13.447 0 0 1-2-.348 7.995 7.995 0 0 1-1.833-.756 5.244 5.244 0 0 1-1.571-1.298c-.416-.516-.758-1.195-1.024-2.034-.267-.84-.4-1.808-.4-2.905 0-1.563.514-2.893 1.541-3.99-.481-1.176-.436-2.493.137-3.952.377-.116.936-.03 1.678.261.741.291 1.284.54 1.629.746.345.207.621.381.83.523a13.948 13.948 0 0 1 3.745-.503c1.288 0 2.537.168 3.747.503l.741-.464c.507-.31 1.106-.595 1.795-.853.69-.258 1.216-.33 1.58-.213.586 1.46.638 2.777.156 3.951 1.028 1.098 1.542 2.428 1.542 3.99 0 1.099-.134 2.07-.4 2.916-.267.846-.611 1.524-1.034 2.034-.423.51-.95.94-1.58 1.288a8.01 8.01 0 0 1-1.834.756c-.592.155-1.259.271-2 .349.676.58 1.014 1.498 1.014 2.75v4.087c0 .232.081.426.244.58.163.155.42.2.77.136 3.019-.994 5.48-2.786 7.386-5.375 1.905-2.59 2.858-5.504 2.858-8.746 0-2.698-.671-5.187-2.01-7.466z"></path></svg></a>
-                                    <a href="#" class="font-bold ml-2 text-2xs text-transparent-50 hover:text-white" v-pre="">
-                                        Hire Me
-                                    </a>
+    <!-- section 1 -->
+    <section class="one">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-wrap lg:py-2">
+                <div class="xl:w-3/6 lg:w-1/2 md:w-2/5 p-3 md:p-4">
+                    <div class="flex flex-wrap">
+                        <img src="https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" class="w-32 h-32 rounded-full xl:mx-0 lg:mx-0 mx-auto border-4">
+                        <div class="flex justify-between mb-8 xl:mx-0 lg:mx-0 mx-auto">
+                            <div class="w-64 shadow-2xl ml-4 flex flex-col items-center lg:items-start rounded-xl py-4 px-7" style="background-color: rgba(0,0,0,.1);">
+                                <div class="flex" >
+                                    <h1 class="text-xl sm:font-bold text-white tracking-normal lg:mr-4 mb-1">Jones</h1>
+                                    <div class="hidden xl:flex xl:justify-center xl:items-center leading-none">
+                                        <a href="#" target="_blank" rel="noreferrer" class="hover:text-white twitter block mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="text-transparent-25 hover:text-white" width="17" height="17" viewBox="0 0 30 30"><path class="tw-fill-current" fill-rule="nonzero" d="M14.896 0C6.682 0 0 6.674 0 14.877c0 8.202 6.682 14.876 14.896 14.876 8.212 0 14.895-6.674 14.895-14.876C29.791 6.674 23.11 0 14.896 0zm6.645 11.472c.006.147.01.296.01.444 0 4.525-3.448 9.74-9.756 9.74A9.707 9.707 0 0 1 6.54 20.12a6.887 6.887 0 0 0 5.076-1.418 3.431 3.431 0 0 1-3.203-2.378 3.46 3.46 0 0 0 1.548-.058 3.426 3.426 0 0 1-2.75-3.357l.001-.043c.462.255.99.41 1.552.427a3.42 3.42 0 0 1-1.06-4.571A9.739 9.739 0 0 0 14.77 12.3a3.426 3.426 0 0 1 3.34-4.205c.986 0 1.875.417 2.502 1.082a6.849 6.849 0 0 0 2.178-.831c-.258.8-.8 1.47-1.51 1.894a6.823 6.823 0 0 0 1.97-.538 6.891 6.891 0 0 1-1.71 1.77z"></path></svg></a>
+                                        <a href="#" target="_blank" rel="noreferrer" class="github hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 30 29" class="text-transparent-25 hover:text-white"><path class="tw-fill-current" fill-rule="nonzero" d="M27.959 7.434a14.866 14.866 0 0 0-5.453-5.414C20.21.69 17.703.025 14.984.025c-2.718 0-5.226.665-7.521 1.995A14.864 14.864 0 0 0 2.01 7.434C.67 9.714 0 12.202 0 14.901c0 3.242.953 6.156 2.858 8.746 1.906 2.589 4.367 4.38 7.385 5.375.351.064.611.019.78-.136a.755.755 0 0 0 .254-.58l-.01-1.047c-.007-.658-.01-1.233-.01-1.723l-.448.077a5.765 5.765 0 0 1-1.083.068 8.308 8.308 0 0 1-1.356-.136 3.04 3.04 0 0 1-1.308-.58c-.403-.304-.689-.701-.858-1.192l-.195-.445a4.834 4.834 0 0 0-.614-.988c-.28-.362-.563-.607-.85-.736l-.136-.097a1.428 1.428 0 0 1-.253-.233 1.062 1.062 0 0 1-.176-.271c-.039-.09-.007-.165.098-.223.104-.059.292-.087.566-.087l.39.058c.26.052.582.206.965.465.384.258.7.594.947 1.007.299.53.66.933 1.082 1.21.423.278.85.417 1.278.417.43 0 .8-.032 1.112-.097a3.9 3.9 0 0 0 .878-.29c.117-.866.436-1.53.956-1.996a13.447 13.447 0 0 1-2-.348 7.995 7.995 0 0 1-1.833-.756 5.244 5.244 0 0 1-1.571-1.298c-.416-.516-.758-1.195-1.024-2.034-.267-.84-.4-1.808-.4-2.905 0-1.563.514-2.893 1.541-3.99-.481-1.176-.436-2.493.137-3.952.377-.116.936-.03 1.678.261.741.291 1.284.54 1.629.746.345.207.621.381.83.523a13.948 13.948 0 0 1 3.745-.503c1.288 0 2.537.168 3.747.503l.741-.464c.507-.31 1.106-.595 1.795-.853.69-.258 1.216-.33 1.58-.213.586 1.46.638 2.777.156 3.951 1.028 1.098 1.542 2.428 1.542 3.99 0 1.099-.134 2.07-.4 2.916-.267.846-.611 1.524-1.034 2.034-.423.51-.95.94-1.58 1.288a8.01 8.01 0 0 1-1.834.756c-.592.155-1.259.271-2 .349.676.58 1.014 1.498 1.014 2.75v4.087c0 .232.081.426.244.58.163.155.42.2.77.136 3.019-.994 5.48-2.786 7.386-5.375 1.905-2.59 2.858-5.504 2.858-8.746 0-2.698-.671-5.187-2.01-7.466z"></path></svg></a>
+                                        <a href="#" class="font-bold ml-2 text-2xs text-transparent-50 hover:text-white" v-pre="">
+                                            Hire Me
+                                        </a>
+                                    </div>
                                 </div>
+                                <p class="tracking-normal text-2xs text-white text-sm">
+                                    Member Since 9 Months Ago
+                                </p>
+                                <p class="tracking-normal text-2xs text-white text-sm">
+                                    Mexi City
+                                </p>
                             </div>
-                            <p class="tracking-normal text-2xs text-white text-sm">
-                                Member Since 9 Months Ago
-                            </p>
-                            <p class="tracking-normal text-2xs text-white text-sm">
-                                Mexi City
-                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="xl:w-3/6 lg:w-1/2 md:w-3/6 w-full p-4 md:p-3 ml-auto">
-                <div class="flex justify-between lg:justify-end mb-4 lg:ml-auto">
-                    <div class="text-center xl:px-9 lg:px-9 md:px-2 py-6 rounded-xl xl:mx-4 lg:mx-4 md:mx-4 lg:shadow-lg hover:shadow-2xl text-white cursor-pointer px-3" style="background-color: rgba(0,0,0,.1);">
-                        <div class="flex items-center justify-center mb-2 lg:mb-4" style="height: 102px;"><img src="https://laracasts.com/images/profiles/xp-level.svg?id=2" alt="Experience Points" class="inline-block mb-2" style="mix-blend-mode: luminosity;">                        
+                <div class="xl:w-3/6 lg:w-1/2 md:w-3/6 w-full p-4 md:p-3 ml-auto">
+                    <div class="flex justify-between lg:justify-end mb-4 lg:ml-auto">
+                        <div class="text-center xl:px-9 lg:px-9 md:px-2 py-6 rounded-xl xl:mx-4 lg:mx-4 md:mx-4 lg:shadow-lg hover:shadow-2xl text-white cursor-pointer px-3" style="background-color: rgba(0,0,0,.1);">
+                            <div class="flex items-center justify-center mb-2 lg:mb-4" style="height: 102px;"><img src="https://laracasts.com/images/profiles/xp-level.svg?id=2" alt="Experience Points" class="inline-block mb-2" style="mix-blend-mode: luminosity;">                        
+                            </div>
+                            <strong class="text-2xl block mb-2">
+                                11,840
+                            </strong>
+                            <div class="text-sm font-semibold" style="color: hsla(0,0%,100%,.5);">
+                                Total<br>Experience
+                            </div>
                         </div>
-                        <strong class="text-2xl block mb-2">
-                            11,840
-                        </strong>
-                        <div class="text-sm font-semibold" style="color: hsla(0,0%,100%,.5);">
-                            Total<br>Experience
+                        <div class="text-center xl:px-6 lg:px-6 md:px-3 py-6 rounded-xl xl:mx-4 lg:mx-4 md:mx-4 lg:shadow-lg hover:shadow-2xl text-white cursor-pointer" style="background-color: rgba(0,0,0,.1);">
+                            <div class="flex items-center justify-center mb-2 lg:mb-4" style="height: 102px;"><img src="https://laracasts.com/images/profiles/xp-lesson.svg?id=2" alt="Experience Points" class="inline-block mb-2" style="mix-blend-mode: luminosity;">                        
+                            </div>
+                            <strong class="text-white text-2xl block mb-2">
+                            105
+                            </strong>
+                            <div class="text-sm font-semibold"  style="color: hsla(0,0%,100%,.5);">
+                                Lessons<br>Completed
+                            </div>
                         </div>
-                    </div>
-                    <div class="text-center xl:px-6 lg:px-6 md:px-3 py-6 rounded-xl xl:mx-4 lg:mx-4 md:mx-4 lg:shadow-lg hover:shadow-2xl text-white cursor-pointer" style="background-color: rgba(0,0,0,.1);">
-                        <div class="flex items-center justify-center mb-2 lg:mb-4" style="height: 102px;"><img src="https://laracasts.com/images/profiles/xp-lesson.svg?id=2" alt="Experience Points" class="inline-block mb-2" style="mix-blend-mode: luminosity;">                        
+                        <div class="text-center xl:px-9 lg:px-9 md:px-6 py-6 rounded-xl xl:mx-4 lg:mx-4 md:mx-4 lg:shadow-lg  hover:shadow-2xl text-white cursor-pointer px-4" style="background-color: rgba(0,0,0,.1);">
+                            <div class="flex items-center justify-center mb-2 lg:mb-4" style="height: 102px;"><img src="https://laracasts.com/images/profiles/xp-stars.svg?id=2" alt="Experience Points" class="inline-block mb-2" style="mix-blend-mode: luminosity;">                        
+                            </div>
+                            <strong class="text-white text-2xl block mb-2">
+                                2
+                            </strong>
+                            <div class="text-sm font-semibold"  style="color: hsla(0,0%,100%,.5);">
+                                Best Reply<br>Awards
+                            </div>
                         </div>
-                        <strong class="text-white text-2xl block mb-2">
-                           105
-                        </strong>
-                        <div class="text-sm font-semibold"  style="color: hsla(0,0%,100%,.5);">
-                            Lessons<br>Completed
-                        </div>
-                    </div>
-                    <div class="text-center xl:px-9 lg:px-9 md:px-6 py-6 rounded-xl xl:mx-4 lg:mx-4 md:mx-4 lg:shadow-lg  hover:shadow-2xl text-white cursor-pointer px-4" style="background-color: rgba(0,0,0,.1);">
-                        <div class="flex items-center justify-center mb-2 lg:mb-4" style="height: 102px;"><img src="https://laracasts.com/images/profiles/xp-stars.svg?id=2" alt="Experience Points" class="inline-block mb-2" style="mix-blend-mode: luminosity;">                        
-                        </div>
-                        <strong class="text-white text-2xl block mb-2">
-                            2
-                        </strong>
-                        <div class="text-sm font-semibold"  style="color: hsla(0,0%,100%,.5);">
-                            Best Reply<br>Awards
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full text-white font-bold uppercase text-xs flex items-center mx-8 mb-4">
-                <span>Level 3</span>
-                <div class=" flex-1 mx-4 rounded-full" style="height: 9px;background-color: rgba(0,0,0,.25);">
-                    <div class="bg-white h-full rounded-full" style="width: 37%;">
                     </div>
                 </div>
-                <span>11,840 XP</span>
+                <div class="w-full text-white font-bold uppercase text-xs flex items-center mx-8 mb-4">
+                    <span>Level 3</span>
+                    <div class=" flex-1 mx-4 rounded-full" style="height: 9px;background-color: rgba(0,0,0,.25);">
+                        <div class="bg-white h-full rounded-full" style="width: 37%;">
+                        </div>
+                    </div>
+                    <span>11,840 XP</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- section 1 end -->
+    </section>
+    <!-- section 1 end -->
 
 
-<!-- section 2 -->
-<section class="p-4">
-    <div class="py-3">
-        <div>
-            <ul class="flex justify-center mb-4 mb-8">
-                <li class="pb-1 px-4 mx-4 mb-1 text-xl">
-                    <button role="tab" aria-selected="true" class="focus:outline-none text-black">Activity</button>
-                </li>
-            </ul>
+    <!-- section 2 -->
+    <section class="p-4">
+        <div class="py-3">
             <div>
-                <div class="container">
-                    <div class="lg:w-2/3 mx-auto">
-                        <div class="flex timeline-section"><div class="timeline-date mr-3"><div class="text-right inline-block"><div class="flex font-bold uppercase text-xs text-sm text-black mb-1"><div class="flex items-center justify-center font-semibold bg-white border border-solid border-blue-light rounded-lg w-10 mr-1 text-xs h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
-                            Dec
-                            </div> <div class="flex items-center justify-center bg-white border border-solid border-blue-light rounded-lg w-10 text-lg h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
-                            02
-                            </div></div> <div class="text-grey-dark font-semibold text-xs">
-                            3 months ago
-                            </div></div></div> <div class="timeline-contents flex-1"><div class="timeline-contents-item bg-white rounded-xl mb-5 p-6"><div class="timeline-contents-activity h-full absolute flex justify-center" style="top: 60px; left: -53px;"><div class="timeline-contents-activity-icon flex items-center justify-center rounded-full p-2 w-10 h-10" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;"><img src="https://laracasts.com/images/profiles/replied_to_conversation_icon.svg" alt="Activity icon"></div></div> <p class="text-lg text-black font-semibold rounded-lg mb-4 tracking-normal" style="word-break: break-word;">
-                            Replied to
-                            <a href="#" class="font-normal hover:text-blue-600 text-blue-500">
-                            Constant Expression Contains Invalid Operations
-                            </a></p> <div class="content user-content text-black text-sm"><p>Any ideas why if i change it to ignore($this-&gt;user-&gt;id) throws : <code class="bg-gray-100 text-red-400">Trying to get property 'id' of non-object</code>, despite the property been present ill show you my method:</p>
-                                
-                            </div><br>
-                            <img src="https://user-images.githubusercontent.com/19997619/27672830-565d34a6-5c95-11e7-8f12-3fed5e62dcb3.png" class="w-full">
+                <ul class="flex justify-center mb-4 mb-8">
+                    <li class="pb-1 px-4 mx-4 mb-1 text-xl">
+                        <button role="tab" aria-selected="true" class="focus:outline-none text-black">Activity</button>
+                    </li>
+                </ul>
+                <div>
+                    <div class="container">
+                        <div class="lg:w-2/3 mx-auto">
+                            <div class="flex timeline-section"><div class="timeline-date mr-3"><div class="text-right inline-block"><div class="flex font-bold uppercase text-xs text-sm text-black mb-1"><div class="flex items-center justify-center font-semibold bg-white border border-solid border-blue-light rounded-lg w-10 mr-1 text-xs h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
+                                Dec
+                                </div> <div class="flex items-center justify-center bg-white border border-solid border-blue-light rounded-lg w-10 text-lg h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
+                                02
+                                </div></div> <div class="text-grey-dark font-semibold text-xs">
+                                3 months ago
+                                </div></div></div> <div class="timeline-contents flex-1"><div class="timeline-contents-item bg-white rounded-xl mb-5 p-6"><div class="timeline-contents-activity h-full absolute flex justify-center" style="top: 60px; left: -53px;"><div class="timeline-contents-activity-icon flex items-center justify-center rounded-full p-2 w-10 h-10" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;"><img src="https://laracasts.com/images/profiles/replied_to_conversation_icon.svg" alt="Activity icon"></div></div> <p class="text-lg text-black font-semibold rounded-lg mb-4 tracking-normal" style="word-break: break-word;">
+                                Replied to
+                                <a href="#" class="font-normal hover:text-blue-600 text-blue-500">
+                                Constant Expression Contains Invalid Operations
+                                </a></p> <div class="content user-content text-black text-sm"><p>Any ideas why if i change it to ignore($this-&gt;user-&gt;id) throws : <code class="bg-gray-100 text-red-400">Trying to get property 'id' of non-object</code>, despite the property been present ill show you my method:</p>
+                                    
+                                </div><br>
+                                <img src="https://user-images.githubusercontent.com/19997619/27672830-565d34a6-5c95-11e7-8f12-3fed5e62dcb3.png" class="w-full">
+                            </div>
+                            </div>
+                            </div>
+                            <div class="flex timeline-section"><div class="timeline-date mr-3"><div class="text-right inline-block"><div class="flex font-bold uppercase text-xs text-sm text-black mb-1"><div class="flex items-center justify-center font-semibold bg-white border border-solid border-blue-light rounded-lg w-10 mr-1 text-xs h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
+                                Nov
+                                </div> <div class="flex items-center justify-center bg-white border border-solid border-blue-light rounded-lg w-10 text-lg h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
+                                30
+                                </div></div> <div class="text-grey-dark font-semibold text-xs">
+                                3 months ago
+                                </div></div></div> <div class="timeline-contents flex-1"><div class="timeline-contents-item bg-white rounded-xl mb-5 p-6"><div class="timeline-contents-activity h-full absolute flex justify-center" style="top: 60px; left: -53px;"><div class="timeline-contents-activity-icon flex items-center justify-center rounded-full bg-white p-2 w-10 h-10" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;"><img src="https://laracasts.com/images/profiles/replied_to_conversation_icon.svg" alt="Activity icon"></div>
+                            </div> <p class="text-lg text-black font-semibold rounded-lg mb-4 tracking-normal" style="word-break: break-word;">
+                                Replied to
+                                <a href="#" class="font-normal hover:text-blue-600 text-blue-500">
+                                    Email Unique Ignore UserId Validation Rule Fails On Update.
+                                </a></p> <div class="content user-content text-black text-sm"><p>Solved it in a non elegant way by making a custom validation that doesn't check for uniqueness for in case the mail field isn't touched:</p>
+                                </div><br>
+                                <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/13981719/original/4453df0f62a58f58a9b110738815e087586b8bdb/write-python-code-for-data-analysis.jpg" class="w-full">
+                            </div>
+                            </div>
+                            </div>
+                            
                         </div>
-                        </div>
-                        </div>
-                        <div class="flex timeline-section"><div class="timeline-date mr-3"><div class="text-right inline-block"><div class="flex font-bold uppercase text-xs text-sm text-black mb-1"><div class="flex items-center justify-center font-semibold bg-white border border-solid border-blue-light rounded-lg w-10 mr-1 text-xs h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
-                            Nov
-                            </div> <div class="flex items-center justify-center bg-white border border-solid border-blue-light rounded-lg w-10 text-lg h-7" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;">
-                            30
-                            </div></div> <div class="text-grey-dark font-semibold text-xs">
-                            3 months ago
-                            </div></div></div> <div class="timeline-contents flex-1"><div class="timeline-contents-item bg-white rounded-xl mb-5 p-6"><div class="timeline-contents-activity h-full absolute flex justify-center" style="top: 60px; left: -53px;"><div class="timeline-contents-activity-icon flex items-center justify-center rounded-full bg-white p-2 w-10 h-10" style="box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;"><img src="https://laracasts.com/images/profiles/replied_to_conversation_icon.svg" alt="Activity icon"></div>
-                        </div> <p class="text-lg text-black font-semibold rounded-lg mb-4 tracking-normal" style="word-break: break-word;">
-                            Replied to
-                            <a href="#" class="font-normal hover:text-blue-600 text-blue-500">
-                                Email Unique Ignore UserId Validation Rule Fails On Update.
-                            </a></p> <div class="content user-content text-black text-sm"><p>Solved it in a non elegant way by making a custom validation that doesn't check for uniqueness for in case the mail field isn't touched:</p>
-                            </div><br>
-                            <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/13981719/original/4453df0f62a58f58a9b110738815e087586b8bdb/write-python-code-for-data-analysis.jpg" class="w-full">
-                        </div>
-                        </div>
-                        </div>
-                        
                     </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!--2 end-->
+    <section>
+        <div class="xl:mx-36 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+            <div class="mx-auto max-w-sm flex flex-col space-y-4 justify-center w-80 items-center mb-4">
+                <div class="bg-white flex items-center p-2 rounded-xl shadow border h-3/4">
+                  <div class="flex items-center space-x-4">
+                    <i class="fas fa-user fa-3x ml-2 text-yellow-400 w-16 h-16 rounded-full"></i>
+                  </div>
+                  <div class="flex-grow p-3">
+                    <div class="font-semibold text-gray-700">
+                        Leader
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        Granted global edit, pin, close, archive, split and merge, more likes
+                    </div>
+                  </div>
                 </div>
-</section>
+              </div>
+              <div class="mx-auto max-w-sm flex flex-col space-y-4 justify-center w-80 items-center mb-4">
+                <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border h-3/4">
+                  <div class="flex items-center space-x-4">
+                    <i class="fas fa-sun fa-3x mt-2 ml-2 text-yellow-400 w-16 h-16 rounded-full"></i>
+                  </div>
+                  <div class="flex-grow p-3">
+                    <div class="font-semibold text-gray-700">
+                        Great Topic
+                    </div>
+                    <div class="text-sm text-gray-500">
+                      Received 50 likes on a topic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mx-auto max-w-sm flex flex-col space-y-4 justify-center w-80 items-center mb-4">
+                <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border h-3/4">
+                  <div class="flex items-center space-x-4">
+                    <i class="fas fa-sun mt-2 ml-2 text-gray-300 fa-3x w-16 h-16 rounded-full"></i>
+                  </div>
+                  <div class="flex-grow p-3">
+                    <div class="font-semibold text-gray-700">
+                        Great contributor
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        contributed 25 accepted pull request
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mx-auto max-w-sm flex flex-col space-y-4 justify-center w-80 items-center mb-4">
+                <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border h-3/4">
+                  <div class="flex items-center space-x-4">
+                    <i class="fas fa-paint-brush text-gray-300 fa-3x w-16 h-16 rounded-full"></i>
+                  </div>
+                  <div class="flex-grow p-3">
+                    <div class="font-semibold text-gray-700">
+                        Theme Author
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        Developed a theme for GreyCampus Forum.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mx-auto max-w-sm flex flex-col space-y-4 justify-center w-80 items-center mb-4">
+                <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border h-3/4">
+                  <div class="flex items-center space-x-4">
+                    <i class="fas fa-heart fa-3x text-gray-300 mt-2 ml-2 w-16 h-16 rounded-full"></i>
+                  </div>
+                  <div class="flex-grow p-3">
+                    <div class="font-semibold text-gray-700">
+                        Respected
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        Received 2 likes on 100 posts
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mx-auto max-w-sm flex flex-col space-y-4 justify-center w-80 items-center mb-4 ">
+                <div class="bg-white w-full flex items-center p-2 rounded-xl shadow border h-3/4">
+                  <div class="flex items-center space-x-4">
+                    <i class="fas fa-eye fa-3x text-yellow-400 text-gray-300 w-16 h-16 rounded-full mt-1 ml-2"></i>
+                  </div>
+                  <div class="flex-grow p-3">
+                    <div class="font-semibold text-gray-700">
+                        Aficionado
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        Visited 100 consecutive days
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
 </body>
 </html>
