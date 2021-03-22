@@ -139,7 +139,9 @@
                             <option>Upvoted Answers</option>
                             <option>Replies</option>
                             <option>Answers Accepted</option>
-                            
+                            <option>Not Replied</option>
+                            <option>Open Threads</option>
+                            <option>Reported Questions</option>
                           </select>
                         </div>
 
@@ -160,56 +162,92 @@
                        <div class="text-xs border-b-2 flex pb-2">
                       <div ><span class="text-green-500 font-medium">Mohan</span> replied to this </div>
                       <div class="ml-auto text-gray-400 font-medium">
-                        <span class="border-2 border-red-500 text text-red-500  ml-2 px-2 rounded-2xl">Pmp Course</span>
+                        <span class="bg-gray-100 text text-gray-800 rounded-2xl hover:bg-gray-200 cursor-pointer  ml-2 px-2 ">Go To Discussion</span><span class="border-2 border-red-500 text text-red-500  ml-2 px-2 rounded-2xl">Pmp Course</span>
                       </div>
                       </div>
-                      <div class="bg-gray-100 mt-3 p-3 rounded hover:shadow-md">
+                      <div class="bg-gray-100 mt-3 p-3 rounded ">
                         <div>
-                          <h1 class="text-sm font-semibold">What is Data Science?</h1>
-                          <p class="text-xs mt-1 text-gray-500">What is data Science and its applications? What is data Science and its applications What is data Science and its applications</p>
                           <div class="flex  items-center">
-                           <div class="flex items-center space-x-2 mt-2">
-                             <img src="https://avatars2.githubusercontent.com/u/1490347?s=460&u=39d7a6b9bc030244e2c509119e5f64eabb2b1727&v=4" alt="My profile" class="w-6 h-6 rounded-full">
-                             <span class="text-xs text-blue-700 font-semibold">Rushali Asthana</span>
+                            <div class="flex items-center space-x-2 ">
+                              <img src="https://avatars2.githubusercontent.com/u/1490347?s=460&u=39d7a6b9bc030244e2c509119e5f64eabb2b1727&v=4" alt="My profile" class="w-6 h-6 rounded-full">
+                              <span class="text-xs text-blue-700 font-semibold">Rushali Asthana</span>
+                            </div>
+                             <div class="ml-auto">
+                               <button class="px-1 border text-gray-600 rounded text-xs  hover:text-purple-600 hover:shadow"><i class="fa fa-arrow-circle-o-up "></i> 25</button>
+                               <button class="px-1 border text-gray-600 rounded text-xs  hover:text-yellow-500 hover:shadow"><i class="fa fa-reply" aria-hidden="true"></i> 3</button>
+                               <button class="px-1 border text-gray-600 rounded text-xs hover:text-green-600 hover:shadow"><i class="fa fa-check" aria-hidden="true"></i> </button>
+                            <button class="px-1 border text-gray-600 rounded text-xs  hover:text-red-600 hover:shadow"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button>
+                            </div>
                            </div>
-                           <div class="ml-auto text-xs text-gray-500 font-semibold">
-                             <span><i class="fa fa-eye" aria-hidden="true"></i> 125</span>
-                             <span><i class="fa fa-reply ml-3" aria-hidden="true"></i> </i>5</span>
-                             <span><i class="fa fa-arrow-circle-o-up mr-1 ml-3" style="font-size: 1.2em;"></i>25</span>
-                             <span class="ml-2 ">Replied 5 mins ago</span>
-                           </div>
-                  
+                           <div class=" mt-1  ml-7 rounded-xl">
+                          <h1 class="text-sm font-semibold ">What is Data Science?</h1>
+                          <p class="text-xs mt-1 text-gray-500">What is data Science and its applications? What is data Science and its applications What is data Science and its applications</p>
+                          <div class="bg-white  p-2 mt-2 rounded-2xl">
+                            <p class="text-xs mt-1 text-gray-500">Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data, and apply knowledge and actionable insights from data across a broad range of application domains.</p>
+                            <div class="flex text-xs items-center">
+                              <div class="flex items-center space-x-2 mt-2">
+                              </button><button class="px-1 border text-gray-600 rounded text-xs  hover:text-purple-600 hover:shadow"><i class="fa fa-arrow-circle-o-up "></i> 3</button>
+                              <button class="px-1 border text-gray-600 rounded text-xs hover:text-green-600 hover:shadow"><i class="fa fa-check" aria-hidden="true"></i>
+                                <button class="px-1 border text-gray-600 rounded text-xs  hover:text-red-600 hover:shadow"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button>
+                              </div>
+                              <div class="ml-auto text-xs text-gray-400 font-semibold">
+                                
+
+                                <span class="ml-2 ">Replied 5 mins ago</span>
+                              </div>
+                     
+                             </div>
                           </div>
+
+                          <div id="all-replies" class="all-replies" style="display:none;">
+                          <div class="bg-white  p-2 mt-2 rounded-2xl">
+                            <p class="text-xs mt-1 text-gray-500">Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data, and apply knowledge and actionable insights from data across a broad range of application domains.</p>
+                            <div class="flex text-xs items-center">
+                              <div class="flex items-center space-x-2 mt-2">
+                                <button class="px-1 border text-gray-600 rounded text-xs hover:text-green-600 hover:shadow"><i class="fa fa-check" aria-hidden="true"></i>
+                                </button><button class="px-1 border text-gray-600 rounded text-xs  hover:text-purple-600 hover:shadow"><i class="fa fa-arrow-circle-o-up "></i></button>
+                                <button class="px-1 border text-gray-600 rounded text-xs  hover:text-red-600 hover:shadow"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button>
+                              </div>
+                              <div class="ml-auto text-xs text-gray-400 font-semibold">
+                                
+                                <span><i class="fa fa-arrow-circle-o-up mr-1 ml-3" style="font-size: 1.2em;"></i>25</span>
+                                <span class="ml-2 "> 5 mins ago</span>
+                              </div>
+                     
+                             </div>
+                          </div>
+                          <div class="bg-white  p-2 mt-2 rounded-2xl">
+                            <p class="text-xs mt-1 text-gray-500">Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data, and apply knowledge and actionable insights from data across a broad range of application domains.</p>
+                            <div class="flex text-xs items-center">
+                              <div class="flex items-center space-x-2 mt-2">
+                                <button class="px-1 border text-gray-600 rounded text-xs hover:text-green-600 hover:shadow"><i class="fa fa-check" aria-hidden="true"></i>
+                                </button><button class="px-1 border text-gray-600 rounded text-xs  hover:text-purple-600 hover:shadow"><i class="fa fa-arrow-circle-o-up "></i></button>
+                                <button class="px-1 border text-gray-600 rounded text-xs  hover:text-red-600 hover:shadow"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button>
+                              </div>
+                              <div class="ml-auto text-xs text-gray-400 font-semibold">
+                                
+                                <span><i class="fa fa-arrow-circle-o-up mr-1 ml-3" style="font-size: 1.2em;"></i>25</span>
+                                <span class="ml-2 "> 5 mins ago</span>
+                              </div>
+                     
+                             </div>
+                          </div>
+                          </div>
+
+                          <div class="flex mt-1 ">
+                          <div class=" text-xs text-gray-400 font-semibold">
+                          
+                            </div>
+                            <div class="ml-auto text-xs ">
+                             <button class="text-blue-500 hover:underline outline-none focus:outline-none" onclick="seeReplies()" id="seemore">See More</button>
+                            </div>
+                          </div>
+                           </div>
+                           
                        </div>
                       </div>
                      </div>
-                     <div class="bg-white  rounded-lg p-5 shadow-md mt-5">
-                      <div class="text-xs border-b-2 flex pb-2">
-                        <div ><span class="text-blue-500 font-medium">Rohith</span> replied to this</div>
-                        <div class="ml-auto text-gray-400 font-medium">
-                          <span class="border-2 border-purple-500 text text-purple-500  ml-2 px-2 rounded-2xl">Data Science Course</span>
-                        </div>
-                        </div>
-                        <div class="bg-gray-100 mt-3 p-3 rounded hover:shadow-md">
-                          
-                            <h1 class="text-sm font-semibold">What is Data Science?</h1>
-                            <p class="text-xs mt-1 text-gray-500">What is data Science and its applications? What is data Science and its applications What is data Science and its applications</p>
-                            <div class="flex  items-center">
-                             <div class="flex items-center space-x-2 mt-2">
-                               <img src="https://avatars2.githubusercontent.com/u/1490347?s=460&u=39d7a6b9bc030244e2c509119e5f64eabb2b1727&v=4" alt="My profile" class="w-6 h-6 rounded-full">
-                               <span class="text-xs text-blue-700 font-semibold">Rushali Asthana</span>
-                             </div>
-                             <div class="ml-auto text-xs text-gray-500 font-semibold">
-                               <span><i class="fa fa-eye" aria-hidden="true"></i> 125</span>
-                               <span><i class="fa fa-reply ml-3" aria-hidden="true"></i> </i>5</span>
-                               <span><i class="fa fa-arrow-circle-o-up mr-1 ml-3" style="font-size: 1.2em;"></i>25</span>
-                               <span class="ml-2 ">Replied 5 mins ago</span>
-                             </div>
-                    
-                            </div>
-                         
-                        </div>
-                     </div>
+                     
                      <div class="bg-white  rounded-lg p-5 shadow-md mt-5">
                       <div class="text-xs border-b-2 flex pb-2">
                       <div ><span class="text-green-500 font-medium">Rohith</span> <span class="text-red-500 font-semibold"> has reported a question </span></div>
@@ -334,6 +372,8 @@
 <script>
   var x = document.getElementById("filters");
   var b = document.getElementById("filter-btn");
+  var allreplies = document.getElementById("all-replies");
+  var seemore = document.getElementById("seemore");
   function myFunction() {
    
    if (x.style.display === "none") {
@@ -345,6 +385,18 @@
     x.style.display = "none";
     b.classList.remove("bg-blue-500");
     b.classList.remove("text-white");
+   } 
+   }
+
+   function seeReplies(){
+    if (allreplies.style.display === "none") {
+     allreplies.style.display = "block";
+     seemore.innerHTML="See less";
+   }
+   else
+   {
+    allreplies.style.display = "none";
+    seemore.innerHTML="See more";
    } 
    }
    
