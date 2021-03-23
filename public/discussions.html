@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses Available</title>
+    <title>discussios-2</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -34,11 +34,9 @@
                   x-transition:leave="transition ease-in duration-75 transform"
                   x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                   @click.away="dropdownOpen = false">
-                  <a href="#"
+                  <a href="user_profile.html"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Profile</a>
-                  <a href="activitydashboard.html"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Dashboard</a>
-                  <a href="index.html"
+                  <a href="forum_display_user.html"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Logout</a>
               </div>
           </div>
@@ -52,13 +50,13 @@
           <div class='bg-white height'>
               <a href="#"><div class='flex items-center'>
                   <div >
-                    <button class="rounded-full hover:border-blue-400 border-blue-400 text-blue-500 mb-4 hover:bg-blue-100 ml-2 border w-48 h-10 text-sm text-left font-semibold" href=""><i class="fa fa-clone ml-3 mr-3 fa-md"></i>All Threads</button><br>
-                    <button class="rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular this week</button><br>
-                    <button class="rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular all time</button><br>
-                    <button class="rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-check-circle ml-3 mr-2 fa-sm"></i>Solved</button><br>
-                    <button class="rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-times-circle ml-3 mr-2 fa-sm"></i>Unsolved</button><br>
-                    <button class="rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-reply ml-3 mr-2 fa-sm"></i>No Replies yet</button><br>
-                    <button class="rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-clipboard ml-3 mr-3 fa-sm"></i>Leaderboard</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 border-blue-400 text-blue-500 mb-4 hover:bg-blue-100 ml-2 border w-48 h-10 text-sm text-left font-semibold" href=""><i class="fa fa-clone ml-3 mr-3 fa-md"></i>All Threads</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular this week</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular all time</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-check-circle ml-3 mr-2 fa-sm"></i>Solved</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-times-circle ml-3 mr-2 fa-sm"></i>Unsolved</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-reply ml-3 mr-2 fa-sm"></i>No Replies yet</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-clipboard ml-3 mr-3 fa-sm"></i>Leaderboard</button><br>
                   </div>
               </div></a>
           </div>
@@ -67,7 +65,7 @@
       <div class="lg:w-3/4">
         <div class="mx-auto  text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
             <div class="flex px-4 md:items-center md:justify-between md:flex-row">
-              <div class="p-4 flex flex-row items-center justify-between">
+              <div class="flex flex-row items-center justify-between">
                 <select class="cursor-pointer p-1 border-4 text-sm w-24 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
                   <option>latest</option>
                   <option>Popular this week</option>
@@ -93,7 +91,7 @@
               </div>
               <nav class="flex-col flex-grow hidden md:flex md:justify-end md:flex-row">
                   <div class="relative text-gray-600 inline-flex">
-                    <button @click="showModal1 = true" class="rounded-full hover:border-blue-400 mb-4 mt-2 mr-4 hover:bg-blue-700 bg-blue-500 border w-32 h-10 text-sm text-left text-white font-semibold" href=""><span class="ml-3">New Discussion</span></button><br>  
+                    <button @click="showModal1 = true" class="rounded-full hover:border-blue-400 mb-4 mt-2 mr-4 hover:bg-blue-700 bg-blue-500 border w-32 h-10 text-sm text-left text-white font-semibold focus:outline-none" href=""><span class="ml-3">New Discussion</span></button><br>  
                     <input type="search" name="serch" placeholder="Search" class="outline-none mt-2 bg-gray-200 text-black h-10 p-4 rounded-full text-sm border-gray-300">
                       <button type="submit" class="absolute right-0 top-0 mt-5 lg:mr-4 md:mr-2 border-gray-400">
                         <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
@@ -108,7 +106,7 @@
             <div class="overflow-hidden rounded">
                 
               <div role="presentation">
-                <div class="border-4 rounded-lg mx-4 ">
+                <div class="border-4 rounded-lg mx-4">
                   <div class="m-2">
                     <div class="flex items-center">
                         <div class="mr-2">                
@@ -126,7 +124,7 @@
                   </div>
                   <div class="pl-12 md:pl-10 xs:pl-10">
                     <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
-                      <a href="replypage_moderator_view.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
+                      <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
                         Best way to remove columns from table [ Live Project ]
                       </a>
                     </h2>
@@ -169,7 +167,7 @@
                 </div>
                 <div class="pl-12 md:pl-10 xs:pl-10">
                   <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
-                    <a href="replypage_moderator_view.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
+                    <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
                       What is the best practice to persist auth user info in SPA?
                     </a>
                   </h2>
@@ -212,7 +210,7 @@
               </div>
               <div class="pl-12 md:pl-10 xs:pl-10">
                 <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700 xl:ml-2">
-                  <a href="replypage_moderator_view.html" id="article-link-151230">
+                  <a href="reply_page.html" id="article-link-151230">
                     Trying to get Logic out of Blade Nested relationship
                   </a>
                 </h2>
@@ -255,7 +253,7 @@
             </div>
             <div class="pl-12 md:pl-10 xs:pl-10">
               <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700 xl:ml-2">
-                <a href="replypage_moderator_view.html" id="article-link-151230" class="ml-2">
+                <a href="reply_page.html" id="article-link-151230" class="ml-2">
                   Fixed table header scroll both horizontal and vertical
                 </a>
               </h2>
@@ -298,11 +296,8 @@
           </div>
           <div class="pl-12 md:pl-10 xs:pl-10">
             <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
-              <a href="replypage_moderator_view.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
-                MySQL or Eloquent
-ELOQUENT
-18
-
+              <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
+                MySQL or Eloquent ELOQUENT 18
               </a>
             </h2>
            <p class="mb-4 lg:ml-2 md:ml-2 xl:ml-2">I've been using MySQL for a while now and am pretty comfortable with it. I find myself using DB::unprepared() for Stored Procedures with a lot of the complex stuff just letting the database do its thing. Is there an advantage to using Eloquent in La...</p>
@@ -344,7 +339,7 @@ ELOQUENT
         </div>
         <div class="pl-12 md:pl-10 xs:pl-10">
           <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
-            <a href="replypage_moderator_view.html" id="article-link-151230" class="xl:ml-4 ml-2 lg:ml-2 md:ml-2">
+            <a href="reply_page.html" id="article-link-151230" class="xl:ml-4 ml-2 lg:ml-2 md:ml-2">
               SQL - WHERE IF condition in QUERY BUILDER request
             </a>
           </h2>
@@ -387,7 +382,7 @@ ELOQUENT
       </div>
       <div class="pl-12 md:pl-10 xs:pl-10">
         <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
-          <a href="replypage_moderator_view.html" id="article-link-151230" class="xl:ml-2 md:ml-2 lg:ml-2">
+          <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 md:ml-2 lg:ml-2">
             Unable to install any package in laravel after Downloading latest xampp
           </a>
         </h2>
@@ -430,7 +425,7 @@ ELOQUENT
     </div>
     <div class="pl-12 md:pl-10 xs:pl-10">
       <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
-        <a href="replypage_moderator_view.html" id="article-link-151230" class="ml-4">
+        <a href="reply_page.html" id="article-link-151230" class="ml-4">
           
 "datatables" slowness problem
         </a>
