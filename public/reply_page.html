@@ -45,12 +45,15 @@
       </div>
     </div>
   </div>
-<div class="p-2 xl:px-32 xl:py-10  xl:ml-2 md:ml-5 lg:ml-8  ">
+  <div class="p-2 xl:px-32 xl:py-10  xl:ml-2 md:ml-5 lg:ml-8  ">
+   <div class="flex">
+   <div class="font-semibold text-sm  rounded-lg mb-2 w-max text-blue-800" id="forum-name" ><ul ><li>PMP Training Course</li></ul></div>
+   <button class="ml-auto bg-blue-500 text-white rounded text-xs lg:text-base p-2 rounded-full font-semibold hover:bg-blue-600 "  @click="showModal1 = true"><i class="fa fa-plus"></i> New Discussion</button>
+   </div>
  <div class="container">
  <div class=" flex flex-wrap">
   <div class="lg:w-3/5">
    <div class="font-bold text-3xl w-full  border-b-2 ">
-    <div class=" font-semibold text-sm  rounded-lg mb-2 w-max text-blue-800" id="forum-name" ><ul ><li>PMP Training Course</li></ul></div>
    </div>
     <div class="bg-gray-200 p-3  mt-8   rounded-2xl  ml-auto">
      
@@ -394,9 +397,10 @@ xml:space="preserve">
     
    </div>
   </div>
-  <div class="lg:w-1/4  mx-auto mt-5 lg:mt-0 ">
+  <div class="lg:w-2/5  mx-auto mt-5 lg:mt-0 ">
+    <div class="lg:ml-28">
     <div class="flex justify-end">
-      <button class="bg-blue-500 text-white rounded text-lg p-2 font-semibold hover:bg-blue-600 "  @click="showModal1 = true">New Discussion</button>
+      <!-- <button class="bg-blue-500 text-white rounded text-lg p-2 font-semibold hover:bg-blue-600 "  @click="showModal1 = true">New Discussion</button> -->
     </div>
    <div class=" p-5 bg-white  rounded-lg shadow-md mt-5">
     <p class="text-xl font-semibold mb-4">Hot Network Questions</p>
@@ -416,6 +420,7 @@ xml:space="preserve">
         <div class="bg-blue-600 mt-3  p-1 text-white text-xs font-semibold rounded-md " style="width: max-content;">Deep Learning</div>
       </div>
     </div>
+  </div>
   </div>
  </div>
  </div>
