@@ -171,7 +171,7 @@
                               </div>
                               <div class="ml-auto">
                                 <button class="px-1 border text-gray-600 rounded text-xs  hover:text-purple-600 hover:shadow"><i class="fa fa-arrow-circle-o-up "></i> 25</button>
-                                <button class="px-1 border text-gray-600 rounded text-xs  hover:text-yellow-500 hover:shadow"  onclick="reply()"><i class="fa fa-reply" aria-hidden="true"></i> 3</button>
+                                <button class="px-1 border text-gray-600 rounded text-xs  hover:text-yellow-500 hover:shadow"><i class="fa fa-reply" aria-hidden="true"></i> 3</button>
                                 <button class="px-1 border text-gray-600 rounded text-xs hover:text-green-600 hover:shadow"><i class="fa fa-check" aria-hidden="true"></i> </button>
                                 <button class="px-1 border text-gray-600 rounded text-xs  hover:text-red-600 hover:shadow"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button>
                                 <button class="px-1 border text-gray-600 rounded text-xs  hover:text-indigo-900 hover:shadow"><i class="fa fa-times" aria-hidden="true"></i></button>
@@ -195,7 +195,9 @@
                                <button class="px-1 border text-gray-600 rounded text-xs  hover:text-yellow-500 hover:shadow"><i class="fa fa-reply" aria-hidden="true"></i> </button>
                               <button class="px-1 border text-gray-600 rounded text-xs  hover:text-red-600 hover:shadow"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></button>
                             </div>
-                             <div class="ml-auto text-xs text-gray-400 font-semibold">  
+                            <div class="ml-auto text-xs text-gray-400 font-semibold">
+                              
+                              
                               <span class="font-light"> 5 mins ago</span>
                             </div>
                             </div>
@@ -290,10 +292,8 @@
                             </div>
                            </div>
                         </div>
-
-                        <img src="Capture.PNG" class="w-full mt-3 rounded">
                           </div>
-                          
+
                           <div class="flex mt-1 ">
                           <div class=" text-xs text-gray-400 font-semibold">
                             </div>
@@ -511,18 +511,6 @@
    }
 
    function seeReplies(){
-    if (allreplies.style.display === "none") {
-     allreplies.style.display = "block";
-     seemore.innerHTML="See less";
-   }
-   else
-   {
-    allreplies.style.display = "none";
-    seemore.innerHTML="See more";
-   } 
-   }
-
-   function reply(){
     if (allreplies.style.display === "none") {
      allreplies.style.display = "block";
      seemore.innerHTML="See less";
