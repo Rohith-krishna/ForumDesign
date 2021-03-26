@@ -183944,7 +183944,7 @@ video {
    background-color:#f0f2f5;
  }
 .one{
-  background-image: linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%);
+  background-color: #084f8b;
 }
 .timelinee:after{
   content: "";
