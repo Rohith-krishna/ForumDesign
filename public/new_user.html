@@ -26,8 +26,8 @@
              </div>
  
              <nav class="flex flex-col mt-12 px-4 text-center font-semibold">
-                 <a href="new_moderator.html"
-                     class="py-2 text-sm text-left hover:bg-gray-200 hover:text-blue-500 border-l-4 p-2  border-blue-500 rounded">New Moderator</a>
+                 <a href="new_user.html"
+                     class="py-2 text-sm text-left hover:bg-gray-200 hover:text-blue-500 border-l-4 p-2  border-blue-500 rounded">New User</a>
              </nav>
          </div>
  
@@ -80,12 +80,12 @@
                              x-transition:leave="transition ease-in duration-75 transform"
                              x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                              @click.away="dropdownOpen = false">
-                             <a href="#"
-                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Profile</a>
-                             <a href="#"
-                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Tickets</a>
-                             <a href="/login"
-                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Logout</a>
+                             <a href="moderatordetails_admin.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Profile</a>
+                                <a href="activity_dashboard.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Dashboard</a>
+                             <a href="forum_display_user.html"
+                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">Logout</a>
                          </div>
                      </div>
                  </div>
