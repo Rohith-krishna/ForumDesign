@@ -96,7 +96,23 @@
                       <div class="xl:flex lg:flex md:flex flex-wrap">
                         <h1 class="text-3xl ">Users Profile</h1>
                         <div class="ml-auto">
-                            <button class="xl:mr-3 lg:mr-3 md:mr-3 xl:mt-0 lg:mt-0 md:mt-0 mt-2 focus:outline-none rounded-lg p-2 bg-gray-200 text-black font-semibold hover:text-white hover:bg-gray-400"><i class="fas fa-users-crown mr-2"></i>Make a Moderator</button>
+                            <button class="xl:mr-3 lg:mr-3 md:mr-3 xl:mt-0 lg:mt-0 md:mt-0 mt-2 focus:outline-none rounded-lg p-2 bg-gray-200 text-black font-semibold hover:text-white hover:bg-gray-400">
+                                <label class="items-center relative w-max cursor-pointer select-none mr-2.5">
+                                    <input type="checkbox" class="appearance-none bg-gray-100 cursor-pointer focus:outline-none focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black h-4 rounded-full transition-colors w-10" />
+                                    <span class="absolute font-medium text-xs uppercase right-1 text-white"></span>
+                                    <span class="absolute font-medium text-xs uppercase right-8 text-white"></span>
+                                    <span class="absolute bg-gray-700 h-4 mr-1 mt-0.5 right-7 rounded-full transform transition-transform w-4">
+                                  </label>
+                                  
+                                  <style>
+                                    input:checked {
+                                      background-color: #22c55e; /* bg-green-500 */
+                                    }
+                                  
+                                    input:checked ~ span:last-child {
+                                      --tw-translate-x: 1.75rem; /* translate-x-7 */
+                                    }
+                                  </style>Make a Moderator</button>
                         </div>
                         <div>
                             <button class="focus:outline-none rounded-lg p-2 xl:mt-0 lg:mt-0 md:mt-0 mt-2 bg-gray-200 text-black font-semibold hover:text-white hover:bg-gray-400"><i class="fas fa-pencil-alt mr-2"></i>Edit Profile</button>
