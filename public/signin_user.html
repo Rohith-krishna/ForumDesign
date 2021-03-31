@@ -44,36 +44,44 @@
     </div>
   </div>
   <div class="bg-gray-800">
-  <nav class="max-w-7xl font-sans flex flex-col container mx-auto px-4 content-center sm:flex-row sm:text-left sm:justify-between py-3   sm:items-baseline w-full">
-    <div class="sm:mb-0 inner">
-      <div class="relative inline-flex lg:mr-0">
-        <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-        <select class="rounded-full text-gray-800 cursor-pointer h-10 pl-5 pr-10 bg-white hover:border-gray-500 focus:outline-none appearance-none">
-          <option>all categories</option>
-          <option>Techical</option>
-          <option>Logical</option>
-          <option>Oops</option>
-          <option>.Net</option>
-        </select>
+    <nav class="max-w-7xl font-sans flex flex-col container mx-auto text-center content-center sm:flex-row sm:text-left sm:justify-between py-3 lg:px-4 xl:px-4 md:px-3  sm:items-baseline w-full">
+      <div class="mb-2 sm:mb-0 inner">
+        <div class="relative inline-flex lg:mr-0">
+          <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+          <select class="rounded-full text-gray-800 cursor-pointer h-10 pl-5 pr-10 bg-white hover:border-gray-500 focus:outline-none appearance-none">
+            <option>all categories</option>
+            <option>Techical</option>
+            <option>Logical</option>
+            <option>Oops</option>
+            <option>.Net</option>
+          </select>
+        </div>
+        <div class="relative inline-flex">
+          <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+          <select class="rounded-full text-gray-700 cursor-pointer h-10 pl-5 w-24 pr-10 bg-white hover:border-gray-500 focus:outline-none appearance-none">
+            <option>tags</option>
+            <option>PMP</option>
+            <option>Full Stack</option>
+            <option>Python</option>
+            <option>DS</option>
+          </select>
+        </div>
       </div>
-      <div class="relative inline-flex">
-        <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-        <select class="rounded-full text-gray-700 cursor-pointer h-10 pl-5 w-24 pr-10 bg-white hover:border-gray-500 focus:outline-none appearance-none">
-          <option>tags</option>
-          <option>PMP</option>
-          <option>Full Stack</option>
-          <option>Python</option>
-          <option>DS</option>
-        </select>
+      <div class="sm:mb-0 self-center">
+        <button
+      type="button" @click="showModal1 = true"
+      class="border lg:mr-0 lg:ml-0 border-4 bg-white rounded-full  h-10 text-gray-800 hover:text-white rounded-md px-2 py-1 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+    >
+    <i class="fas fa-plus"></i> New Discussion
+    </button>
       </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
   <section class="container mx-auto max-w-7xl">
     <div class="flex flex-wrap lg:py-2">
       <div class="xl:w-3/5 lg:w-1/2 md:w-2/4 p-3 md:p-4">
         <div class="hover:shadow-md items-center mb-5">
-          <div class='bg-white  rounded-lg shadow '>
+          <div class='bg-white py-1.5 rounded-lg shadow '>
               <a href="discussions.html"><div class='flex items-center px-5 xl:py-3 xl:h-24'>
                   <div class="grid gird-cols-2">
                       <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -89,7 +97,7 @@
           </div>
         </div>
         <div class="hover:shadow-md items-center mb-5">
-          <div class='bg-white  rounded-lg shadow '>
+          <div class='bg-white xl:py-0 py-1.5 rounded-lg shadow '>
               <a href="discussions.html"><div class='flex items-center px-5 xl:py-3 xl:h-24'>
                   <div class="grid gird-cols-2">
                       <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -105,7 +113,7 @@
           </div>
         </div>
         <div class="hover:shadow-md items-center mb-5">
-          <div class='bg-white  rounded-lg shadow '>
+          <div class='bg-white xl:py-0 py-1.5 rounded-lg shadow '>
               <a href="discussions.html"><div class='flex items-center px-5 xl:py-3 xl:h-24'>
                   <div class="grid gird-cols-2">
                       <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -121,7 +129,7 @@
           </div>
         </div>
         <div class="hover:shadow-md items-center mb-5">
-          <div class='bg-white  rounded-lg shadow '>
+          <div class='bg-white xl:py-0 py-1.5 rounded-lg shadow '>
               <a href="discussions.html"><div class='flex items-center px-5 xl:py-3 xl:h-24'>
                   <div class="grid gird-cols-2">
                       <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -137,7 +145,7 @@
           </div>
         </div>
         <div class="hover:shadow-md items-center mb-5">
-          <div class='bg-white  rounded-lg shadow '>
+          <div class='bg-white xl:py-0 py-1.5 rounded-lg shadow '>
               <a href="discussions.html"><div class='flex items-center px-5 xl:py-3 xl:h-24'>
                   <div class="grid gird-cols-2">
                       <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -153,7 +161,7 @@
           </div>
         </div>
         <div class="hover:shadow-md items-center mb-5">
-          <div class='bg-white  rounded-lg shadow '>
+          <div class='bg-white xl:py-0 py-1.5 rounded-lg shadow '>
               <a href="discussions.html"><div class='flex items-center px-5 xl:py-3 xl:h-24'>
                   <div class="grid gird-cols-2">
                       <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -169,7 +177,7 @@
           </div>
         </div>
         <div class="hover:shadow-md items-center mb-5">
-          <div class='bg-white  rounded-lg shadow '>
+          <div class='bg-white xl:py-0 py-1.5 rounded-lg shadow '>
               <a href="discussions.html"><div class='flex items-center px-5 xl:py-3 xl:h-24'>
                   <div class="grid gird-cols-2">
                       <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -185,7 +193,7 @@
           </div>
         </div>
         <div class="hover:shadow-md items-center mb-5">
-                   <div class='bg-white  rounded-lg shadow '>
+                   <div class='bg-white xl:py-0 py-1.5 rounded-lg shadow '>
                        <a href="second.html" target="_blank"><div class='flex items-center px-5 xl:py-3  xl:h-24'>
                            <div class="grid gird-cols-2">
                                <h1 class='text-gray-600 text-lg '><b>Data Science full program</b></h1>
@@ -223,43 +231,43 @@
                 </tr>
                 <tr>
                   <td class="border text-left py-3 px-4 text-center"><a class="hover:text-blue-500 flex" href="#"><img alt="avatar" src="https://inews.gtimg.com/newsapp_match/0/8693739867/0" class="mt-2 mr-2 lg:visible w-8 h-8 rounded-full"><span class="lg:mr-0 mr-10 self-center">Rohith krishna</span></a></td>
-                  <td class="border text-left py-3 px-4 text-center">#1</td>
+                  <td class="border text-left py-3 px-4 text-center">#2</td>
                   <td class="border text-left py-3 px-4 text-center">1,239,960</td>
                   <td class="border text-left py-3 px-4 text-center">9,281</td>
                 </tr>
                 <tr>
                   <td class="border text-left py-3 px-4 text-center"><a class="hover:text-blue-500 flex" href="#"><img alt="avatar" src="https://appzzang.me/data/editor/1608/f9c387cb6bd7a0b004f975cd92cbe2d9_1471626325_6802.png" class="mt-2 mr-2 lg:visible w-8 h-8 rounded-full"><span class="lg:mr-0 mr-10 self-center">Rushali Asthana</span></a></td>
-                  <td class="border text-left py-3 px-4 text-center">#1</td>
+                  <td class="border text-left py-3 px-4 text-center">#3</td>
                   <td class="border text-left py-3 px-4 text-center">1,239,960</td>
                   <td class="border text-left py-3 px-4 text-center">9,281</td>
                 </tr>
                 <tr>
                   <td class="border text-left py-3 px-4 text-center"><a class="hover:text-blue-500 flex" href="#"><img alt="avatar" src="https://www.hdwallpapers.in/download/2012_darksiders_ii-1920x1080.jpg" class="mt-2 mr-2 lg:visible w-8 h-8 rounded-full"><span class="lg:mr-0 mr-10 self-center">Bhavana</span></a></td>
-                  <td class="border text-left py-3 px-4 text-center">#1</td>
+                  <td class="border text-left py-3 px-4 text-center">#5</td>
                   <td class="border text-left py-3 px-4 text-center">1,239,960</td>
                   <td class="border text-left py-3 px-4 text-center">9,281</td>
                 </tr>
                 <tr>
                   <td class="border text-left py-3 px-4 text-center w-1/2"><a class="hover:text-blue-500 flex" href="#"><img alt="avatar" src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/crysis-3-keyart.jpg.adapt.crop1x1.767p.jpg" class="mt-2 mr-2 lg:visible w-8 h-8 rounded-full"><span class="lg:mr-0 mr-10 self-center">Vidhi Agarwal</span></a></td>
-                  <td class="border text-left py-3 px-4 text-center">#1</td>
+                  <td class="border text-left py-3 px-4 text-center">#7</td>
                   <td class="border text-left py-3 px-4 text-center">1,239,960</td>
                   <td class="border text-left py-3 px-4 text-center">9,281</td>
                 </tr>
                 <tr>
                   <td class="border text-left py-3 px-4 text-center"><a class="hover:text-blue-500 flex" href="#"><img alt="avatar" src="https://www.hdwallpapers.in/download/2012_darksiders_ii-1920x1080.jpg" class="mt-2 mr-2 lg:visible w-8 h-8 rounded-full"><span class="lg:mr-0 mr-10 self-center">Tanmay Tiwari</span></a></td>
-                  <td class="border text-left py-3 px-4 text-center">#1</td>
+                  <td class="border text-left py-3 px-4 text-center">#9</td>
                   <td class="border text-left py-3 px-4 text-center">1,239,960</td>
                   <td class="border text-left py-3 px-4 text-center">9,281</td>
                 </tr>
                 <tr>
                   <td class="border text-left py-3 px-4 text-center"><a class="hover:text-blue-500 flex" href="#"><img alt="avatar" src="https://uifaces.co/our-content/donated/1H_7AxP0.jpg" class="mt-2 mr-2 lg:visible w-8 h-8 rounded-full"><span class="lg:mr-0 mr-10 self-center">Sreej Mukka</span></a></td>
-                  <td class="border text-left py-3 px-4 text-center">#1</td>
+                  <td class="border text-left py-3 px-4 text-center">#10</td>
                   <td class="border text-left py-3 px-4 text-center">1,239,960</td>
                   <td class="border text-left py-3 px-4 text-center">9,281</td>
                 </tr>
                 <tr>
                   <td class="border text-left py-3 px-4 text-center"><a class="hover:text-blue-500 flex" href="#"><img alt="avatar" src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/crysis-3-keyart.jpg.adapt.crop1x1.767p.jpg" class="mt-2 mr-2 lg:visible w-8 h-8 rounded-full"><span class="lg:mr-0 mr-10 self-center">Raghavendra</span></a></td>
-                  <td class="border text-left py-3 px-4 text-center">#1</td>
+                  <td class="border text-left py-3 px-4 text-center">#11</td>
                   <td class="border text-left py-3 px-4 text-center">1,239,960</td>
                   <td class="border text-left py-3 px-4 text-center">9,281</td>
                 </tr>
