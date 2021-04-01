@@ -9,6 +9,10 @@
  <title>Activity Board</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 <body>
 <div>
@@ -112,7 +116,7 @@
                             <div class="absolute top-4 right-3"> <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i> </div>
                         </div>
                       </div>
-                        <input type="date" class="border xl:ml-2 w-72 mt-2 lg:mt-0  rounded-full outline-none h-14 ">
+                      <input type="text" class="border xl:ml-2 w-72 mt-2 lg:mt-0  rounded-full outline-none h-14 p-5" name="daterange" value="01/01/2018 - 01/15/2018" />
 
                     
                         <div class="relative inline-flex">
@@ -520,6 +524,15 @@
     seemore.innerHTML="See more";
    } 
    }
+
+   $(function() {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
+
    
 </script>
 </html>
