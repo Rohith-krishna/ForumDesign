@@ -43,7 +43,10 @@
       </div>
     </div>
   </div>
-  <div class="bg-gray-800">
+  <div class="flex md:hidden">
+    <button id="filter-btn" class="px-2 py-1 ml-auto rounded border-2 border-blue-500 m-3 hover:bg-blue-600 hover:text-white" onclick="myFunction()"><i class="fa  fa-filter text-xs" aria-hidden="true"></i></button>  
+  </div>
+  <div class="md:bg-gray-800 hidden md:block" id="filters" >
     <nav class="max-w-7xl font-sans flex flex-col container mx-auto text-center content-center sm:flex-row sm:text-left sm:justify-between py-3 lg:px-4 xl:px-4 md:px-3  sm:items-baseline w-full">
       <div class="mb-2 sm:mb-0 inner">
         <div class="relative inline-flex lg:mr-0">
@@ -408,7 +411,26 @@
         </div>
       </div>
     </div>
-
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("fa-sort-size-down");
+      }
+      var x = document.getElementById("filters");
+    var b = document.getElementById("filter-btn");
+    function myFunction() {
+     
+     if (x.style.display === "none") {
+       x.style.display = "block";
+       b.classList.add("bg-blue-500");
+       b.classList.add("text-white");
+     }
+     else{
+      x.style.display = "none";
+      b.classList.remove("bg-blue-500");
+      b.classList.remove("text-white");
+     } 
+     }
+      </script>
 
 </body>
 </html>
