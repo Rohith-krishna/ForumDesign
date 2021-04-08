@@ -18,7 +18,7 @@
 </head>
 <body>
 <div>
-  <div x-data="{ sidebarOpen: false, darkMode: false }">
+  <div x-data="{ sidebarOpen: false }">
      <div class="flex h-screen bg-blue-50  font-roboto">
          <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false"
              class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden "></div>
@@ -27,7 +27,6 @@
              class="fixed z-30 inset-y-0 left-0 transition duration-300 transform bg-white   overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
              <div class="flex items-center justify-center mt-8">
                  <div class="flex items-center px-4">
-                     <!-- <span class="text-gray-800 dark:text-white text-2xl font-semibold">Dashboard</span> -->
                      <a href="#" class="xl:text-4xl md:text-3xl text-xl font-serif rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-blue-600">GreyCampus<i class="text-xs text-yellow-500">Forum</i></a>
                  </div>
              </div>
